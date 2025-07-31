@@ -133,5 +133,5 @@ public class FoxFactory extends MovableFactoryAncestor {
 ```
 java
 spriteRegister.add(Fox.class, "🦊 ");
-factoryMovable.add(new FoxFactory(Rabbit.class));
 ```
+Добавьте `FoxFactory` в фабрику для симуляции.
