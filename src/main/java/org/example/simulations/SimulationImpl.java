@@ -11,6 +11,14 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class SimulationImpl implements Simulation {
 
+    private final static String PAUSED = "PAUSED";
+    private final static String RESUMED = "RESUMED";
+    private final static String STEP = "STEP";
+    private final static String SIMULATION_FINISHED = "SIMULATION FINISHED";
+    private final static String INITIAL_STATE = "INITIAL STATE";
+    private final static String TURN = "\nTurn: ";
+    private final static String CREATURE = "Creature: ";
+
     private final World world;
     private final Action initActions;
     private final Action turnActions;
@@ -96,7 +104,7 @@ public class SimulationImpl implements Simulation {
         try {
             if (!paused) {
                 paused = true;
-                System.out.println("PAUSED");
+                System.out.println(PAUSED);
             }
         } finally {
             stateLock.unlock();
@@ -110,7 +118,7 @@ public class SimulationImpl implements Simulation {
             if (paused) {
                 paused = false;
                 pauseCondition.signalAll();
-                System.out.println("RESUMED");
+                System.out.println(RESUMED);
             }
         } finally {
             stateLock.unlock();
@@ -125,7 +133,7 @@ public class SimulationImpl implements Simulation {
                 singleStepRequested = true;
                 paused = false;
                 pauseCondition.signalAll();
-                System.out.println("STEP");
+                System.out.println(STEP);
             }
         } finally {
             stateLock.unlock();
@@ -140,7 +148,7 @@ public class SimulationImpl implements Simulation {
             paused = false;
             pauseCondition.signalAll();
             inputHandler.stop();
-            System.out.println("SIMULATION FINISHED");
+            System.out.println(SIMULATION_FINISHED);
         } finally {
             stateLock.unlock();
         }
@@ -161,13 +169,13 @@ public class SimulationImpl implements Simulation {
     }
 
     private void renderInitialState() {
-        System.out.println("Initial state:");
+        System.out.println(INITIAL_STATE);
         System.out.println(render.rendering(world));
     }
 
     private void renderCurrentState() {
-        System.out.println("\nTurn: " + counter);
-        System.out.println("Creature: " + world.getAllByType(Creature.class).size());
+        System.out.println(TURN + counter);
+        System.out.println(CREATURE + world.getAllByType(Creature.class).size());
         System.out.println(render.rendering(world));
     }
 }

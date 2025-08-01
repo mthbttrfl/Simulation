@@ -1,10 +1,10 @@
 package org.example.worlds;
 
+import org.example.coordinates.Boundary;
+import org.example.coordinates.Coordinate;
 import org.example.entities.Creature;
 import org.example.entities.Entity;
 import org.example.exceptions.EntityNotFoundException;
-import org.example.coordinates.Boundary;
-import org.example.coordinates.Coordinate;
 import org.example.validators.DefaultWorldValidator;
 import org.example.validators.WorldValidator;
 

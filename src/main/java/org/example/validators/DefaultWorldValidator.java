@@ -1,12 +1,12 @@
 package org.example.validators;
 
+import org.example.coordinates.Boundary;
+import org.example.coordinates.Coordinate;
 import org.example.entities.Entity;
 import org.example.exceptions.CoordinateOccupiedException;
 import org.example.exceptions.EntityNotFoundException;
 import org.example.exceptions.InvalidCoordinateException;
 import org.example.exceptions.WorldFullException;
-import org.example.coordinates.Boundary;
-import org.example.coordinates.Coordinate;
 
 import java.util.Map;
 

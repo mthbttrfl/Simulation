@@ -1,8 +1,8 @@
 package org.example.factories.movable;
 
 import org.example.entities.Entity;
-import org.example.validators.FactoryValidator;
 import org.example.validators.DefaultMovedValidator;
+import org.example.validators.FactoryValidator;
 
 public abstract class MovableFactoryAncestor implements FactoryMovable {
 

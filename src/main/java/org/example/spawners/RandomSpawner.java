@@ -1,8 +1,8 @@
 package org.example.spawners;
 
+import org.example.coordinates.Coordinate;
 import org.example.entities.Entity;
 import org.example.worlds.World;
-import org.example.coordinates.Coordinate;
 
 import java.util.List;
 import java.util.Random;

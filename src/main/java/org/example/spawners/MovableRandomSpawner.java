@@ -1,8 +1,8 @@
 package org.example.spawners;
 
+import org.example.coordinates.Coordinate;
 import org.example.entities.Entity;
 import org.example.factories.movable.FactoryMovable;
-import org.example.coordinates.Coordinate;
 
 import java.util.List;
 

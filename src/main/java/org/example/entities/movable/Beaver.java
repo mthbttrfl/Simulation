@@ -1,7 +1,7 @@
 package org.example.entities.movable;
 
-import org.example.entities.Entity;
 import org.example.coordinates.Coordinate;
+import org.example.entities.Entity;
 import org.example.entities.Herbivore;
 
 import java.util.List;

@@ -1,9 +1,9 @@
 package org.example.pathfinders;
 
+import org.example.coordinates.Coordinate;
 import org.example.validators.DefaultPathValidator;
 import org.example.validators.PathValidator;
 import org.example.worlds.World;
-import org.example.coordinates.Coordinate;
 
 import java.util.ArrayList;
 import java.util.List;

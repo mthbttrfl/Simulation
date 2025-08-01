@@ -1,8 +1,8 @@
 package org.example.validators;
 
-import org.example.entities.Entity;
 import org.example.coordinates.Boundary;
 import org.example.coordinates.Coordinate;
+import org.example.entities.Entity;
 
 import java.util.Map;
 

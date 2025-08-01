@@ -1,8 +1,7 @@
 package org.example.validators;
 
-import org.example.worlds.World;
-import org.example.worlds.WorldMap;
 import org.example.coordinates.Coordinate;
+import org.example.worlds.World;
 
 public class DefaultPathValidator implements PathValidator {
     @Override

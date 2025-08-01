@@ -1,9 +1,9 @@
 package org.example.factories.movable;
 
+import org.example.coordinates.Coordinate;
 import org.example.entities.Entity;
 import org.example.entities.movable.Rabbit;
 import org.example.validators.FactoryValidator;
-import org.example.coordinates.Coordinate;
 
 import java.util.List;
 

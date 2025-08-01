@@ -1,7 +1,7 @@
 package org.example.pathfinders;
 
-import org.example.worlds.World;
 import org.example.coordinates.Coordinate;
+import org.example.worlds.World;
 
 import java.util.List;
 

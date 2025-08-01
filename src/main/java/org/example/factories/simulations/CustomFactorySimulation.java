@@ -27,11 +27,14 @@ import org.example.worlds.WorldMap;
 
 import java.util.List;
 
-public class DefaultFactorySimulation implements FactorySimulation {
-
+public class CustomFactorySimulation implements FactorySimulation{
+    private final int row;
+    private final int column;
     private final SpriteRegister spriteRegister;
 
-    public DefaultFactorySimulation(SpriteRegister spriteRegister) {
+    public CustomFactorySimulation(int row, int column, SpriteRegister spriteRegister) {
+        this.row = row;
+        this.column = column;
         this.spriteRegister = spriteRegister;
     }
 
@@ -39,17 +42,19 @@ public class DefaultFactorySimulation implements FactorySimulation {
     public Simulation get() {
         Render render = new RenderImpl(spriteRegister);
 
-        World world = new WorldMap();
+        World world = new WorldMap(row, column);
 
         List<FactoryMovable> factoryMovable = List.of(
                 new WolfFactory(Rabbit.class, Beaver.class),
                 new BeaverFactory(Tree.class),
-                new RabbitFactory(Grass.class));
+                new RabbitFactory(Grass.class)
+        );
 
         List<FactoryImmovable> factoryImmovable = List.of(
                 new GrassFactory(),
                 new TreeFactory(),
-                new RockFactory());
+                new RockFactory()
+        );
 
         Action initActions = new SpawnAction(List.of(
                 new MovableRandomSpawner(factoryMovable),

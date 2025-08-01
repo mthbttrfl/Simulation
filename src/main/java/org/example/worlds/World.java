@@ -1,8 +1,8 @@
 package org.example.worlds;
 
+import org.example.coordinates.Coordinate;
 import org.example.entities.Creature;
 import org.example.entities.Entity;
-import org.example.coordinates.Coordinate;
 
 import java.util.List;
 
