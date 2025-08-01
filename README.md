@@ -48,17 +48,15 @@ java
 public class Main {
     public static void main(String[] args) {
         SpriteRegister spriteRegister = new SpriteRegisterImpl();
-        // Настройка спрайтов
-        spriteRegister.add(Grass.class, "🌿 ");      // Трава
-        spriteRegister.add(Rock.class, "🪨 ");       // Камень
-        spriteRegister.add(Tree.class, "🌳 ");       // Дерево
-        spriteRegister.add(Wolf.class, "🐺 ");       // Волк
-        spriteRegister.add(Beaver.class, "🦫 ");     // Бобер
-        spriteRegister.add(Rabbit.class, "🐇 ");     // Кролик
-        
-        FactorySimulation factory = new DefaultFactorySimulation(spriteRegister);
-        Simulation simulation = factory.get();
-        simulation.start();
+        spriteRegister.add(Grass.class, "\uD83C\uDF31 ");
+        spriteRegister.add(Rock.class, "\uD83E\uDEA8 ");
+        spriteRegister.add(Tree.class, "🌳 ");
+        spriteRegister.add(Wolf.class, "\uD83D\uDC3A ");
+        spriteRegister.add(Beaver.class, "\uD83E\uDDAB ");
+        spriteRegister.add(Rabbit.class, "\uD83D\uDC30 ");
+
+        Menu menu = new Menu(spriteRegister);
+        menu.run();
     }
 }
 ```
@@ -81,6 +79,7 @@ src/
 │   │   │   ├── spawners/         # Генерация объектов
 │   │   │   ├── validators/       # Валидация данных
 │   │   │   ├── worlds/           # Реализация мира
+|   |   |   ├── Menu.java         # Настройка запуска симуляции (меню)
 │   │   │   └── Main.java         # Точка входа
 ```
 ___
