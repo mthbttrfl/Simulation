@@ -24,9 +24,6 @@ public class Menu {
 
     private final SpriteRegister sprites;
 
-    private Simulation simulation;
-    private FactorySimulation factory;
-
     public Menu(SpriteRegister sprites) {
         this.sprites = sprites;
     }
@@ -43,13 +40,14 @@ public class Menu {
             if (answer.equalsIgnoreCase(YES)) {
                 int rows = getValidDimension(scanner, ROW);
                 int columns = getValidDimension(scanner, COLUMN);
-                factory = new CustomFactorySimulation(rows, columns, sprites);
-                simulation = factory.get();
+
+                FactorySimulation factory = new CustomFactorySimulation(rows, columns, sprites);
+                Simulation simulation = factory.get();
                 simulation.start();
                 break;
             } else if (answer.equalsIgnoreCase(NO)) {
-                factory = new DefaultFactorySimulation(sprites);
-                simulation = factory.get();
+                FactorySimulation factory = new DefaultFactorySimulation(sprites);
+                Simulation simulation = factory.get();
                 simulation.start();
                 break;
             } else {
