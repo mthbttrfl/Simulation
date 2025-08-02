@@ -20,7 +20,7 @@ public class Main {
         spriteRegister.add(Wolf.class, "\uD83D\uDC3A");
         spriteRegister.add(Beaver.class, "\uD83E\uDDAB");
         spriteRegister.add(Rabbit.class, "\uD83D\uDC30");
-        spriteRegister.add(Bear.class, "\uD83E\uDDF8");
+        spriteRegister.add(Bear.class, "\uD83D\uDC3B");
 
         Menu menu = new Menu(spriteRegister);
         menu.run();
