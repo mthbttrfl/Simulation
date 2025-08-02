@@ -5,7 +5,7 @@ import org.example.renders.sprites.SpriteRegister;
 import org.example.worlds.World;
 
 public class RenderImpl implements Render{
-    private static final String FIELD = "⬛ ";
+    private static final String FIELD = "⬛";
 
     private final SpriteRegister spriteRegister;
 
